@@ -4,7 +4,8 @@ class TruecarSpider(scrapy.Spider):
   name = "truecar"
 
   def start_requests(self):
-    urls = ['https://www.truecar.com/used-cars-for-sale/listings/hyundai/kona/']
+    urls = ['https://www.truecar.com/used-cars-for-sale/listings/hyundai/kona/',
+    'https://www.truecar.com/used-cars-for-sale/listings/honda/hr-v/']
 
     for url in urls:
       yield scrapy.Request(url=url, callback=self.parse)
